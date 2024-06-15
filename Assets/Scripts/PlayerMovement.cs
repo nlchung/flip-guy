@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
     private Rigidbody2D body;
-    private Animator anim;
+    // private Animator anim;
     private BoxCollider2D boxCollider;
     private float horizontalInput;
 
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake () {
         // get references to components from object
         body = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        // anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -24,25 +24,19 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
 
 
-        // flips player to face left / right when changing direction
-        if (horizontalInput > 0.01f) {
-            transform.localScale = Vector3.one;
-        } else if (horizontalInput < -0.01f) {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+        // // flips player to face left / right when changing direction
+        // if (horizontalInput > 0.01f) {
+        //     transform.localScale = Vector3.one;
+        // } else if (horizontalInput < -0.01f) {
+        //     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        // }
 
         // Set animator parameters
-        anim.SetBool("grounded", isGrounded());
+        // anim.SetBool("grounded", isGrounded());
 
         // set player's velocity
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
         
-        if (!isGrounded()) {
-            body.gravityScale = 0;
-            body.velocity = Vector2.zero;
-        } else {
-            body.gravityScale = 1;
-        }
 
         if(Input.GetKey(KeyCode.Space)) {
             Jump();
@@ -52,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump() {
         if (isGrounded()) {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
-            anim.SetTrigger("jump");
+            // anim.SetTrigger("jump");
         }
     }
 
