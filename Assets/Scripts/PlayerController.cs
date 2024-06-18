@@ -1,11 +1,11 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {   
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
     private Rigidbody2D body;
     // private Animator anim;
     private BoxCollider2D boxCollider;
