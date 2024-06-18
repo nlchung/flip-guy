@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 109436916}
   - component: {fileID: 109436917}
   - component: {fileID: 109436918}
-  - component: {fileID: 109436919}
   - component: {fileID: 109436920}
+  - component: {fileID: 109436921}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -211,7 +211,7 @@ MonoBehaviour:
     TimeResyncInterval: 30
     EnsureNetworkVariableLengthSafety: 0
     EnableSceneManagement: 1
-    ForceSamePrefabs: 1
+    ForceSamePrefabs: 0
     RecycleNetworkIds: 1
     NetworkIdRecycleDelay: 120
     RpcHashSize: 0
@@ -221,20 +221,6 @@ MonoBehaviour:
     OldPrefabList: []
   RunInBackground: 1
   LogLevel: 1
---- !u!114 &109436919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109436913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d167b3e7caec48119929dc694a9cc85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MainMenuUIDocument: {fileID: 0}
-  m_InGameUIDocument: {fileID: 0}
 --- !u!114 &109436920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +236,20 @@ MonoBehaviour:
   isHost: 1
   m_PinkGuyPrefab: {fileID: 5365022944090090292, guid: bce4778bee27a40f9b60e312d781abfb, type: 3}
   m_BlueGuyPrefab: {fileID: 3233445024329209615, guid: ce5bb5f102f5143c9b245401d9b40782, type: 3}
+--- !u!114 &109436921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109436913}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d167b3e7caec48119929dc694a9cc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MainMenuUIDocument: {fileID: 0}
+  m_InGameUIDocument: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
