@@ -11,6 +11,15 @@ public class PlayerController : NetworkBehaviour
     private BoxCollider2D boxCollider;
     private float horizontalInput;
 
+    public override void OnNetworkSpawn()
+    {
+        if (!IsOwner) 
+        {
+            enabled = false;
+            return;
+        }
+    }
+
     // runs every time you load
     private void Awake () {
         // get references to components from object
