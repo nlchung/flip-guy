@@ -9,7 +9,13 @@ public class CameraFollow : NetworkBehaviour
     {
         if (!IsOwner) 
         {
+            print("camera follow working");
             gameObject.SetActive(false);
+        }
+        if (!IsHost) 
+        {
+            print("camera transform working");
+            gameObject.transform.Rotate(-180, 0, 0);
         }
     }
 }
